@@ -1,0 +1,163 @@
+[05-Jan-2017 16:11:58 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(265): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[20-Jan-2017 19:44:20 UTC] PHP Fatal error:  Call to undefined function length() in /home/hopped/public_html/laboratorioslace.com/recupera.php on line 16
+[21-Mar-2017 12:34:31 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12290 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[21-Mar-2017 12:42:11 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 9094 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[21-Mar-2017 12:43:24 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 14271 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[29-Mar-2017 17:59:23 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/menu_pacientes.php on line 371
+[11-Apr-2017 04:15:03 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[14-Apr-2017 17:00:01 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/menu_pacientes.php on line 371
+[27-Apr-2017 18:07:20 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 13081 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[27-Apr-2017 18:08:05 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 5496 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[27-Apr-2017 18:08:24 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12006 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[27-Apr-2017 18:08:39 America/Mexico_City] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 12006 bytes) in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 1446
+[10-Jun-2017 22:40:00 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[12-Jun-2017 21:18:20 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[14-Jun-2017 21:00:58 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[19-Jun-2017 00:48:59 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[20-Jun-2017 22:48:57 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[24-Jun-2017 19:15:23 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[26-Jun-2017 20:21:56 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[28-Jun-2017 20:34:13 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[30-Jun-2017 20:14:01 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[02-Jul-2017 18:20:04 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[04-Jul-2017 20:25:17 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[06-Jul-2017 19:29:24 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[12-Jul-2017 21:58:08 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[14-Jul-2017 21:30:18 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[16-Jul-2017 22:20:24 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[18-Jul-2017 23:17:48 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[20-Jul-2017 20:57:59 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[22-Jul-2017 21:49:34 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[24-Jul-2017 18:29:08 America/Mexico_City] PHP Fatal error:  Uncaught exception 'Exception' with message 'FPDF error: Some data has already been output, can't send PDF file (output started at /home/hopped/public_html/laboratorioslace.com/includes/error_nologin.php:33)' in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php:271
+Stack trace:
+#0 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(1052): FPDF->Error('Some data has a...')
+#1 /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/hopped/public_html/laboratorioslace.com/reporte_prod_fin.php(266): FPDF->Output()
+#3 {main}
+  thrown in /home/hopped/public_html/laboratorioslace.com/fpdf181/fpdf.php on line 271
+[14-Dec-2017 17:49:56 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/analisis.php on line 161
+[14-Dec-2017 11:54:36 America/Mexico_City] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/menu_pacientes.php on line 371
+[14-Dec-2017 11:54:51 America/Mexico_City] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/menu_pacientes.php on line 371
+[02-Jan-2018 11:38:37 America/Mexico_City] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/menu_pacientes.php on line 371
+[06-Feb-2018 19:41:49 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/analisis.php on line 303
+[06-Feb-2018 19:41:49 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/hopped/public_html/laboratorioslace.com/analisis.php on line 303

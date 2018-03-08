@@ -1,0 +1,616 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  padding-top: 0px;
+}
+
+br { display: block; line-height: 1.6em; }
+
+input, textarea {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+}
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+
+
+h3{
+  display: block;
+  font-size: 2.6em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0 #555;
+  margin-top: 10%;
+}
+
+
+ /*form field */
+
+
+.col-2, .col-3, .col-4 {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+
+label > input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 7px 5px 3px;
+  border: none;
+  outline: none;
+  color: #555;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: .6;
+  transition: all linear .3s;
+}
+
+.col-submit {
+  text-align: center;
+  padding: 20px;
+}
+
+label > select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #555;
+  margin: 16px 0 6px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  opacity: .4;
+  transition: all linear .3s;
+}
+
+label > input:focus, label > select:focus {
+  opacity: 1;
+}
+
+
+
+/** button design based on http://codepen.io/guvootes/pen/eyDAb **/
+button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  overflow: hidden;
+  outline: none;
+}
+
+button.submitbtn {
+  background-image: -moz-linear-gradient(#97c16b, #8ab959);
+  background-image: -webkit-linear-gradient(#97c16b, #8ab959);
+  background-image: linear-gradient(#97c16b, #8ab959);
+  border-bottom: 1px solid #648c3a;
+  cursor: pointer;
+  color: #fff;
+}
+button.submitbtn:hover {
+  background-image: -moz-linear-gradient(#8ab959, #7eaf4a);
+  background-image: -webkit-linear-gradient(#8ab959, #7eaf4a);
+  background-image: linear-gradient(#8ab959, #7eaf4a);
+}
+button.submitbtn:active {
+  height: 34px;
+  border-bottom: 0;
+  margin: 1px 0 0 0;
+  background-image: -moz-linear-gradient(#7eaf4a, #8ab959);
+  background-image: -webkit-linear-gradient(#7eaf4a, #8ab959);
+  background-image: linear-gradient(#7eaf4a, #8ab959);
+  -moz-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+#wrapper {
+  font-size: 15px;
+  border-collapse: collapse;
+  padding-right: 10%;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.sortable {
+  font-size: 15px;
+  border-collapse: collapse;
+  padding-right: 10%;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.sortable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2D4C82;
+  color: white;
+  cursor: pointer;
+}
+
+.sortable td, .sortable th {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.sortable .head {
+  cursor:pointer; padding-left:18px
+}
+
+.sortable .desc {
+  background:#005BBF;
+  cursor:pointer;
+  padding-left:18px
+}
+
+.sortable .asc {
+  background:#0054A0;
+  cursor:pointer;
+  padding-left:18px
+}
+
+.sortable .head:hover, .sortable .desc:hover, .sortable .asc:hover {
+  color:#fff
+}
+
+.sortable tr:nth-child(even){background-color: #f2f2f2;}
+
+.sortable tr:hover {background-color: #ddd;}
+
+
+/* -------------------------------------------- */
+/* ----------- Pagination: Digg Style --------- */
+/* -------------------------------------------- */
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+div.center {text-align: center;}
+
+nav{
+    overflow:hidden;
+    padding:0px;
+    width:100%;
+    background:#2D4C82;
+}
+
+nav ul{
+    list-style:none;
+    margin:0 10px 0 10px;
+    padding:0;
+    width: 100%;
+}
+
+nav ul li{
+    /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+    float:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    margin-right:10px;
+    margin-top: 10px;
+    /*Sombras para texto, los mismos parametros que box-shadow*/
+    text-shadow: 0px 1px 0px #FFF;
+    width: 27em;
+    margin-bottom: 10px;
+}
+
+
+  img {
+        opacity: 1.0;
+        margin-top: 50px;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 100);
+        filter: alpha(opacity = 100);
+        }
+  img:hover {
+        opacity: 0.4;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 70);
+        filter: alpha(opacity = 70);
+        transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        }
+
+  #yolo{
+    float:right;
+    margin-top:-515px;
+  }
+
+
+/** responsive design **/
+/* Escritorio (rojo)*/
+
+@media (min-width: 2000px) and (max-width: 3000px) {
+  #print{
+        float:right;
+          margin-top: 90px;
+        margin-right: 25px;
+      }
+  #email{
+        float:right;
+        margin-top: 90px;
+        margin-right: 25px;
+      }
+
+      #yolo{
+        float:right;
+        margin-top:-515px;
+      }
+}
+
+
+@media (min-width: 1200px) {
+
+  input[type=text] {
+    margin-top: 50px;
+    width: 7em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+      }
+
+  h1{
+  display: block;
+  font-size: 4.0em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 20px;
+  margin-right: 50px;
+
+}
+
+.add {
+  float: right;
+  margin-top: -20px;
+  margin-right: 10em;
+
+}
+.add2 {
+  float: right;
+  margin-right: 60px;
+}
+
+#logo {
+width: 50%;
+float: left;
+
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+#print{
+      float:right;
+      margin-top: 29px;
+      margin-right: 25px;
+    }
+#email{
+      float:right;
+      margin-top: 29px;
+      margin-right: 25px;
+    }
+
+#yolo{
+      float:right;
+      margin-right: -190px;
+      margin-top:10px;
+    }
+
+}
+
+/* Escritorio pequeño o tablet (verde)*/
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    input[type=text] {
+    width: 7em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+      }
+
+  h1{
+  display: block;
+  font-size: 3.5em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 20px;
+  margin-right: 50px;
+
+}
+
+input[type="text"]:focus { width: 40%;}
+#logo { width: 30%; float: left;}
+
+.add {
+  float: right;
+  margin-top: -50px;
+  margin-right: 60px;
+
+}
+
+nav ul li {
+ width: 100%;
+  }
+
+  #print{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+  #email{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+
+  #yolo{
+        float:right;
+        margin-top:-295px;
+      }
+
+}
+/* Tablet o Smartphone horizontal (azul)*/
+
+@media (min-width: 547px) and (max-width: 767px) {
+
+    input[type=text] {
+    width: 7em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+      }
+
+    input[type="text"]:focus { width: 50%;}
+
+  h1{
+  display: block;
+  font-size: 2.8em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 20px;
+
+}
+  #logo { width: 30%; float: left;}
+
+  .add {
+  float: right;
+  margin-top: -50px;
+  margin-right: 40px;
+}
+
+nav ul li {
+ width: 100%;
+  }
+
+  #print{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+  #email{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+
+  #yolo{
+        float:right;
+        margin-top:-375px;
+      }
+}
+
+@media (min-width: 481px) and (max-width: 546px) {
+
+    input[type=text] {
+    width: 7em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+      }
+
+    input[type="text"]:focus { width: 50%;}
+
+  h1{
+  display: block;
+  font-size: 2.8em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 20px;
+
+}
+  #logo { width: 30%; float: left;}
+
+  .add {
+  float: right;
+  margin-top: -50px;
+  margin-right: 40px;
+}
+
+nav ul li {
+ width: 100%;
+  }
+
+  #print{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+  #email{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+
+  #yolo{
+        float:right;
+        margin-top:-455px;
+      }
+}
+
+/* Smartphone (amarillo)*/
+
+@media (max-width: 480px) {
+
+    input[type=text] {
+    width: 8em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+      }
+input[type="text"]:focus { width: 50%;}
+  h1{
+  display: block;
+  font-size: 2.0em;
+  line-height: 1.45em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  margin-top: 20px;
+  text-align: center;
+
+}
+ #logo { width: 30%; float: left;}
+
+ .add {
+  float: right;
+  margin-right: 30px;
+  margin-top: -50px;
+}
+
+nav ul li {
+ width: 100%;
+  }
+
+
+  #print{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+  #email{
+        float:right;
+        margin-top: 0px;
+        margin-right: 25px;
+      }
+
+  #yolo{
+        float:right;
+        margin-top:-455px;
+      }
+
+}

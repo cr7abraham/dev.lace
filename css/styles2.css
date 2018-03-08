@@ -1,0 +1,395 @@
+@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 20;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background: #e2eef4;
+  font-size: 62.5%;
+  line-height: 1;
+  padding-top: 40px;
+}
+
+br { display: block; line-height: 1.6em; }
+
+input, textarea {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+}
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+
+h1{
+  display: block;
+  font-size: 4.1em;
+  line-height: 1.45em;
+  font-family: 'Laila', serif;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+h3{
+  display: block;
+  font-size: 2.1em;
+  line-height: 1.45em;
+  font-family: 'Laila', serif;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+
+/** form field **/
+form {
+  display: block;
+  margin: 30px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 0;
+}
+
+form > div > label {
+  display: block;
+  padding: 20px 20px 10px;
+/*  vertical-align: top;*/
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #939393;
+
+}
+form > div.switch > label {
+  padding: 16px 20px 13px;
+}
+
+.col-2, .col-3, .col-4 {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+form > div > .col-4 {
+  height: 86px;
+}
+
+label > input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 27px;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 7px 5px 3px;
+  border: none;
+  outline: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: .6;
+  transition: all linear .3s;
+}
+
+.col-submit {
+  text-align: center;
+  padding: 20px;
+}
+
+label > select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #555;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  opacity: .4;
+  transition: all linear .3s;
+}
+
+label > input:focus, label > select:focus {
+  opacity: 1;
+}
+
+
+
+/** button design based on http://codepen.io/guvootes/pen/eyDAb **/
+button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  overflow: hidden;
+  outline: none;
+}
+
+button.submitbtn {
+  background-image: -moz-linear-gradient(#97c16b, #8ab959);
+  background-image: -webkit-linear-gradient(#97c16b, #8ab959);
+  background-image: linear-gradient(#97c16b, #8ab959);
+  border-bottom: 1px solid #648c3a;
+  cursor: pointer;
+  color: #fff;
+}
+button.rfc {
+  width: 50%;
+  background-image: -moz-linear-gradient(#0065B5,#0065B5);
+  background-image: -webkit-linear-gradient(#0065B5, #0065B5);
+  background-image: linear-gradient(#0065B5, #0065B5);
+  border-bottom: 1px solid #0065B5;
+  cursor: pointer;
+  color: #fff;
+}
+button.rfc2 {
+  width: 50%;
+  background-image: -moz-linear-gradient(#f70000,#f70000);
+  background-image: -webkit-linear-gradient(#f70000, #f70000);
+  background-image: linear-gradient(#f70000, #f70000);
+  border-bottom: 1px solid #f70000;
+  cursor: pointer;
+  color: #fff;
+}
+/*button.rfc:hover {
+  background-image: -moz-linear-gradient(#0082AA, #0082AA);
+  background-image: -webkit-linear-gradient(#0082AA, #0082AA);
+  background-image: linear-gradient(#0082AA, #0082AA);
+}*/
+button.submitbtn:hover {
+  background-image: -moz-linear-gradient(#8ab959, #7eaf4a);
+  background-image: -webkit-linear-gradient(#8ab959, #7eaf4a);
+  background-image: linear-gradient(#8ab959, #7eaf4a);
+}
+button.submitbtn:active {
+  height: 34px;
+  border-bottom: 0;
+  margin: 1px 0 0 0;
+  background-image: -moz-linear-gradient(#7eaf4a, #8ab959);
+  background-image: -webkit-linear-gradient(#7eaf4a, #8ab959);
+  background-image: linear-gradient(#7eaf4a, #8ab959);
+  -moz-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/** responsive design **/
+@media(min-width: 850px){
+  form > div { display: inline-block; }
+  .col-submit { display: block; }
+
+  .col-2, .col-3, .col-4 { box-shadow: 1px 1px #e4e4e4; border: none; }
+
+  .col-2 { width: 50% }
+  .col-3 { width: 33.3333333333% }
+  .col-4 { width: 25% }
+
+  .col-submit button { width: 30%; margin: 0 auto; }
+}
+
+#customers {
+    font-size: 15px;
+    border-collapse: collapse;
+    padding-right: 10%;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3F6EBF;
+    color: white;
+}
+
+input[type=text] {
+    display: block;
+    margin: 30px;
+    width: 120px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 70%;
+}
+#hola{
+  display: table;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#hola ul{
+float: left;
+margin-top: 0;
+margin-bottom: 1rem;
+
+}
+
+#logo {
+
+float: left;
+
+}
+
+
+/**********************************************************
+/*  ****************INICIO DATEBIRTH*
+**********************************************************/
+
+
+.datefield {
+    display: inline;
+    background: #FFF;
+    border-radius: 4px;
+    color: #666;
+}
+
+.datefield * {
+    display: inline-block;
+}
+
+.datefield input {
+    width: 1.7em;
+    padding: 0 0.4em;
+    border: none;
+    font-size: 100%;
+    background: none;
+    color: #000;
+}
+
+.datefield input#year { width: 3em; }
+
+.datefield input:focus { outline:none; }
+
+
+
+
+/**********************************************************
+/*  ****************FIN PARA DATEBIRTH*
+**********************************************************/
+
+
+
+
+
+
+/**********************************************************
+/*  ****************BOTON SWITCH*
+**********************************************************/
+    .onoffswitch {
+        position: relative; width: 68px;
+       /* -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;*/
+
+    }
+    .onoffswitch-checkbox {
+        display: none;
+        padding: 0 0 20px 0;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        border: 2px solid #999999; border-radius: 20px;
+    }
+    .onoffswitch-inner {
+        display: block; width: 200%; margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
+        font-size: 20px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "M";
+        padding-left: 18px;
+        background-color: #0065B5; color: #FFFFFF;
+        text-align: left;
+    }
+    .onoffswitch-inner:after {
+        content: "F";
+        padding-right: 18px;
+        background-color: #EA5599; color: #F9FAF7;
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 17px; margin: 7.5px;
+        background: #FFFCFC;
+        position: absolute; top: 0; bottom: 0;
+        right: 32px;
+        border: 2px solid #999999; border-radius: 20px;
+        transition: all 0.3s ease-in 0s;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px;
+    }
+
+
+/**********************************************************
+***************** FIN BOTON SWITCH
+**********************************************************/
+
+
+
+
+/**********************************************************
+***************** INICIO LOADER
+**********************************************************/
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+/**********************************************************
+***************** FIN LOADER
+**********************************************************/
