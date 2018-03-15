@@ -684,7 +684,7 @@
 
 
 
-	<page_footer> <!-- Define el footer de la hoja -->
+	<!-- page_footer> <!-- Define el footer de la hoja -->
 
 		<table id="footer">
 
@@ -742,7 +742,7 @@
 
         </table>
 
-    </page_footer>
+    </page_footer -->
 
 
 
@@ -1990,7 +1990,7 @@
 
 				</table> -->
 
-				<div id="divfooter" >
+				<!-- div id="divfooter" >
 
 					<div id="divatte" style="font-size: 12px;">Atentamente</div>
 
@@ -1998,7 +1998,7 @@
 
 					<div id="divnombre" style="font-size: 12px;">Q. F. B. y E. H. D. L Fabiola Espinosa B.</div>
 
-				</div>
+				</div -->
 
 
 
@@ -2368,79 +2368,11 @@
 
     <!-- Fin del cuerpo de la hoja -->
 
-
-
-	<page_footer> <!-- Define el footer de la hoja -->
-
-		<table id="footer">
-
-			<tr id="atte1">
-
-				<td>
-
-					<div class="attext" style="font-size:12px;">
-
-						Atentamente
-
-					</div>
-
-				</td>
-
-			</tr>
-
-			<tr id="atteline">
-
-				<td>
-
-					<div class="divline">
-
-						_____________________________
-
-					</div>
-
-				</td>
-
-			</tr>
-
-			<tr id="atte2">
-
-				<td>
-
-					<div class="name" style="font-size:12px;">
-
-						Q. F. B. y E. H. D. L Fabiola Espinosa B.
-
-					</div>
-
-				</td>
-
-			</tr>
-
-            <tr class="fila">
-
-				<td>
-
-				<!--	<span>Pénjamo, Gto. <?php //echo $fechaAct; ?></span> -->
-
-				</td>
-
-			</tr>
-
-        </table>
-
-    </page_footer>
-
-
-
-        
-
-
-
-    
+   
 
     <!-- Define el cuerpo de la hoja -->
 
-	<?php
+	<?php 
 
 	
 
