@@ -153,7 +153,7 @@ foreach($_GET as $loc=>$item) $_GET[$loc] = urldecode(base64_decode($item));
         <label style="height: 86px;">
           Fecha de Nacimiento
           <div id="date1" class="datefield"><br><br>
-            <input id="day" name="dia" maxlength="2" placeholder="Fecha de Nacimiento" required/>
+            <input id="day" name="dia" maxlength="20" placeholder="Fecha de Nacimiento" required/>
           </div>
         </label>
       </div>
