@@ -299,11 +299,11 @@ $conta2 =$conta2 +1;
                 $idmed = $_GET['idm'];
 
               }
+              //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 INI
+              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos WHERE idmedicos = '$idmed' order by nombre asc");
 
-              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos WHERE idmedicos = '$idmed'");
-
-              $querymedicos2 = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos");
-
+              $querymedicos2 = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos order by nombre asc");
+              //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 FIN
 
 
               
@@ -325,9 +325,9 @@ $conta2 =$conta2 +1;
             }else{
 
               echo "<option  value=".$idmedico.">Seleccionar Médico</option>";
-
-              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos");
-
+              //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 INI
+              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos order by nombre asc");
+              //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 FIN
               while ($valores =  mysqli_fetch_array($querymedicos, MYSQLI_ASSOC)) {
 
                 echo '<option value="'.$valores['idmedicos'].'">'.$valores['nombre'].'</option>';
@@ -525,13 +525,14 @@ else{  ?>
           //$a = "a";
 
             $mysqli = mysqli_connect($host, $user, $pwd, $db);
-
-  $querymedicos = $mysqli -> query ("SELECT idpropio, nombre_estudio FROM estudios WHERE idestudio = '$idmed'");
+            
+            // Modificación  M001 CGLG 14/03/2018 INI
+            //$querymedicos = $mysqli -> query ("SELECT idpropio, nombre_estudio FROM estudios WHERE idestudio = '$idmed' ORDER BY nombre_estudio asc");
 
               //echo "<option  value=".'a'.">Seleccionar Estudio</option >";
 
-              $querymedicos = $mysqli -> query ("SELECT idpropio, nombre_estudio FROM estudios GROUP BY idpropio");
-
+              $querymedicos = $mysqli -> query ("SELECT idpropio, nombre_estudio FROM estudios GROUP BY idpropio ORDER BY nombre_estudio asc");
+            // Modificación  M001 CGLG 14/03/2018 FIN
               $nombreestudio = "";
 
               while ($valores =  mysqli_fetch_array($querymedicos, MYSQLI_ASSOC)) {
