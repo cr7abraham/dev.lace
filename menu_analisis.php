@@ -137,6 +137,7 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
 
       <table class="sortable" id="sorter">
         <tr>
+          <th>No.</th>
           <th>Estudio</th>
           <th >Fecha</th>
           <th class="nosort">M&eacute;dico</th>
@@ -159,7 +160,7 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
   if (mysqli_connect_errno()) {
         echo "Falló la conexión: ".mysqli_connect_error();
         }
-  if(empty($_GET['busca'])){
+  /*if(empty($_GET['busca'])){
 
       $sql = "SELECT count(idanalisis)
               FROM contador ";
@@ -238,14 +239,23 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
           }
       }
 
-    }
+  }*/
 
-     if($registros!= null){
+ //    if($registros!= null){
 
-         $idpropio = 0;
+  $sql = "SELECT  estudio,
+                  fecha,
+                  medicos_idmedicos,
+                  idpropio
+            FROM contador
+            GROUP BY idpropio";
 
+      $query = mysqli_query($con, $sql);
+
+      $idpropio = 0;
+      $id_number = 1;
       while ($fila = mysqli_fetch_array($query, MYSQLI_ASSOC)){
-
+      
       $sql1 = "SELECT idmedicos, nombre
               FROM   medicos
               where  idmedicos = '$fila[medicos_idmedicos]'";
@@ -267,6 +277,7 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
  ?>
         <tr>
         <?php if($idpropio !=  $fila['idpropio'] ) { ?>
+          <td><?php echo $id_number++; ?></td>
           <td><?php echo $fila['estudio']; ?></td>
           <td><?php echo $fila['fecha']; ?></td>
           <td><?php echo $fila1['nombre']; ?> </td>
@@ -283,15 +294,15 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
 
 <?php }
   mysqli_close($con);
-}
+//}
 ?>
       </table>
 
       </form>
 
-    <div id="pagination_controls">
-      <?php echo $paginationCtrls; ?>
-    </div>
+    <!--div id="pagination_controls">
+      <?php //echo $paginationCtrls; ?>
+    </div-->
 
 
 <script type="text/javascript">
