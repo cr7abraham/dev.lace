@@ -787,7 +787,9 @@ $encontro = 0;
 				$domicilio_hos = utf8_decode($_POST['domicilio_h']);
 
 				$email      = utf8_decode($_POST['email']);
-
+				//M003 INI
+				$area      = utf8_decode($_POST['aream']);
+				//M003 FIN
 
 
 			 
@@ -822,11 +824,11 @@ $encontro = 0;
 
 				$sql = "INSERT INTO medicos (nombre, domicilio_medi, ciudad_medi, estado_medi,
 
-								telefono_medi, hospital, direccion_hospital, email)
+								telefono_medi, hospital, direccion_hospital, email, area)
 
 					 VALUES('$nombre', '$direccion', '$ciudad', '$estado',
 
-						 '$telefono', '$nombre_hosp', '$domicilio_hos', '$email');";
+						 '$telefono', '$nombre_hosp', '$domicilio_hos', '$email', '$area');";
 
 
 
@@ -901,7 +903,9 @@ $encontro = 0;
 				$nombre_hosp  = utf8_decode($_POST['nombre_h']);
 
 				$domicilio_hos = utf8_decode($_POST['domicilio_h']);
-
+				//M003 INI
+				$area = utf8_decode($_POST['aream']);
+				//M003 FIN
 
 
 				$mysqli = mysqli_connect($host, $user, $pwd, $db);
@@ -930,7 +934,9 @@ $encontro = 0;
 
 						 			  hospital 		    = '$nombre_hosp',
 
-						 			  direccion_hospital = '$domicilio_hos'
+						 			  direccion_hospital = '$domicilio_hos',
+									
+									  area 				= '$area'
 
 		 									WHERE idmedicos = $idup;";
 
