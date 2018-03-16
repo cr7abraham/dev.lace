@@ -110,34 +110,40 @@ if (!isset($_GET['V']) && !isset($_GET['m']) ){
       <input  name="domicilio_m" tabindex="2" required value="<?php echo utf8_encode($fila['domicilio_medi']); ?>">
     </label>
   </div>
+  <div class="col-2">
+    <label>
+      Área
+      <input  name="aream" tabindex="3" required value="<?php echo utf8_encode($fila['area']); ?>">
+    </label>
+  </div>
   <div class="col-3">
     <label>
       Ciudad
-      <input  name="ciudad_m" tabindex="3" value="<?php echo utf8_encode($fila['ciudad_medi']); ?>">
+      <input  name="ciudad_m" tabindex="4" value="<?php echo utf8_encode($fila['ciudad_medi']); ?>">
     </label>
   </div>
   <div class="col-3">
     <label>
       Estado
-      <input  name="estado_m" tabindex="4" value="<?php echo utf8_encode($fila['estado_medi']); ?>">
+      <input  name="estado_m" tabindex="5" value="<?php echo utf8_encode($fila['estado_medi']); ?>">
     </label>
   </div>
   <div class="col-3">
     <label>
       Teléfono
-       <input  name="telefono_m" tabindex="5" required  placeholder="XXX XXX XX XX" value="<?php echo utf8_encode($fila['telefono_medi']); ?>" pattern="[0-9 | \s]*">
+       <input  name="telefono_m" tabindex="6" required  placeholder="XXX XXX XX XX" value="<?php echo utf8_encode($fila['telefono_medi']); ?>" pattern="[0-9 | \s]*">
   </div>
 
   <div class="col-3">
     <label>
       Nombre del Hospital
-      <input  name="nombre_h" tabindex="6" value="<?php echo utf8_encode($fila['hospital']); ?>">
+      <input  name="nombre_h" tabindex="7" value="<?php echo utf8_encode($fila['hospital']); ?>">
     </label>
   </div>
   <div class="col-3">
     <label>
       Domicilio Hospital
-      <input  name="domicilio_h" tabindex="7" value="<?php echo utf8_encode($fila['direccion_hospital']); ?>">
+      <input  name="domicilio_h" tabindex="8" value="<?php echo utf8_encode($fila['direccion_hospital']); ?>">
     </label>
   </div>
  <div class="col-3">
@@ -146,7 +152,7 @@ if (!isset($_GET['V']) && !isset($_GET['m']) ){
 
           Email
 
-          <input  name="email" tabindex="6" type="email" placeholder="nombre@dominio.com" value="<?php 
+          <input  name="email" tabindex="9" type="email" placeholder="nombre@dominio.com" value="<?php 
 
           if ($fila != null ){echo utf8_encode($fila['email']);} ?>">
 
