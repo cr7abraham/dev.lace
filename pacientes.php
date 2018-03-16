@@ -156,12 +156,12 @@ foreach($_GET as $loc=>$item) $_GET[$loc] = urldecode(base64_decode($item));
       <div class="col-4">
         <label style="height: 86px;">
           Fecha de Nacimiento
-          <div id="date1"><br><br>
+          <!--<div id="date1"><br><br>-->
             <input id="day" name="dia" maxlength="10" placeholder="Fecha"  value="<?php echo $fecha; ?>" required/> 
             <!-- Se elimina el formato DD/MM/AAAA
             <input id="month" name="mes" maxlength="2" placeholder="MM" value="<//?php echo $mes; ?>"  required/> /
             <input id="year" name="anio" maxlength="4" placeholder="AAAA" value="<//?php echo $año; ?>"  required/> -->
-          </div>
+          <!--</div>-->
         </label>
       </div>
       <!-- Cambios M007 MVC FIN -->
