@@ -1,6 +1,6 @@
 <?php   include("includes/conexion.php");
 
-         $mysqli = mysqli_connect($host, $user, $pwd, $db);
+      $mysqli = mysqli_connect($host, $user, $pwd, $db);
 
       if (mysqli_connect_errno()) {
 
@@ -8,7 +8,7 @@
 
       }
 
-          else{
+      else{
 
       // echo "Error ".mysqli_error($mysqli);
 
@@ -18,21 +18,15 @@ session_start();
 
   if(empty($_SESSION['valueuser'])){
 
-
-
   include("includes/error_nologin.php");
-
-
 
      }
 
-
-
 foreach($_GET as $loc=>$item) $_GET[$loc] = urldecode(base64_decode($item));
 
- $_SESSION['p']=$_GET['p'];
+  $_SESSION['p']=$_GET['p'];
 
-$icontador = 1;
+  $icontador = 1;
 
   $cont = 1;
 
@@ -40,135 +34,83 @@ $icontador = 1;
 
   $idmed = 0;?>
 
- 
 
   <?php if(!isset($_GET['p'])){
-
-  // include("includes/error_usuario1.php"); 
 
       include("includes/error_nologin.php");
 
   }
-
   else{
 
+  if($_GET['p']==null){
 
+    $_GET['p']=$_SESSION['p'];
 
-if($_GET['p']==null){
-
-  $_GET['p']=$_SESSION['p'];
-
-  echo  $_SESSION['p'];
-
-
-
-}
-
-
+    echo  $_SESSION['p'];
+  }
 
          $sql123 = "SELECT *
+                    FROM estudios" ;
 
-                  FROM estudios" ;
+  $conta2 = 1;
 
+  $query123  = mysqli_query($mysqli, $sql123);
 
+  while ($fila = mysqli_fetch_array($query123, MYSQLI_ASSOC)){
 
-$conta2 = 1;
+    $a= $fila["prueba"];
 
-         $query123  = mysqli_query($mysqli, $sql123);
+    $arrayPHP [0][$conta2]=array($fila["idpropio"],$fila["prueba"],$fila["unidades"],$fila["valorreferencia"],$fila["nombre_estudio"],$fila["subtitulo"]);
 
-    while ($fila = mysqli_fetch_array($query123, MYSQLI_ASSOC)){
-
-        // $fila = mysqli_fetch_array($query123, MYSQLI_ASSOC);
-
- $a= $fila["prueba"];
-
-
-
-// "id_fruta":"1","1":"Manzana","nombre_fruta":"Manzana";
-
- $arrayPHP [0][$conta2]=array($fila["idpropio"],$fila["prueba"],$fila["unidades"],$fila["valorreferencia"],$fila["nombre_estudio"],$fila["subtitulo"]);
-
-
-
-$conta2 =$conta2 +1;
+    $conta2 =$conta2 +1;
 
   }
 
- $arrayPHP [0][$conta2]=array(0);
-
+    $arrayPHP [0][$conta2]=array(0);
     ?>
 
-				   <script language='javascript'>
+	<script language='javascript'>
 
 				  var i = 1;
-
           var vi = 1;
-
           var t = 1;
-
           var containterno = 0;
-
           var arreglo = [];
-
           var comentario = 0;
 
           sessionStorage.LocalToGlobalVar = i;
-
           sessionStorage.LocalToGlobalVar = vi;
-
           sessionStorage.LocalToGlobalVar = t;
-
           sessionStorage.LocalToGlobalVar = containterno;
+          sessionStorage.LocalToGlobalVar = arreglo;
+          sessionStorage.LocalToGlobalVar = comentario;
 
-           sessionStorage.LocalToGlobalVar = arreglo;
-
-           sessionStorage.LocalToGlobalVar = comentario;
-
-			</script>
-
+	</script>
 
 
 <!doctype html>
 
  <html lang="en-US">
-
       <head>
+      <title>Análisis</title>
+      <script src="js/jquery.min.js"></script>
 
-           <title>Análisis</title>
-
-           <script src="js/jquery.min.js"></script>
-
-                    <?php
-
- $idpac = $_GET['p']; ?>
+<?php $idpac = $_GET['p']; ?>
 
  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
 
   <?php if ($_GET['pro'] != 0){
 
-
-
-
-
     $idpropio = $_GET['pro'];
-
-
-
     $sql    = "SELECT * FROM analisis where idpropio = '$idpropio' ";
-
-        $query  = mysqli_query($mysqli, $sql);
-
-        $fila = $mysqli->query($sql);
-
-        $fil3 = $mysqli->query($sql);
-
-        $fila1 = mysqli_fetch_array($query);
+    $query  = mysqli_query($mysqli, $sql);
+    $fila = $mysqli->query($sql);
+    $fil3 = $mysqli->query($sql);
+    $fila1 = mysqli_fetch_array($query);
 
     mysqli_close($mysqli);
 
-          ?>
-
-
+  ?>
 
     <?php    }
 
@@ -176,36 +118,22 @@ $conta2 =$conta2 +1;
 
          $fila1 = null;
 
-
-
        }
 
   }?>
 
+    <link rel="shortcut icon" href="img/icon.png">
 
-
-           <link rel="shortcut icon" href="img/icon.png">
-
-           <meta charset="utf-8">
-
-           <!-- Pantalla de carga-->
-
-           <script type="text/javascript">
-
+    <meta charset="utf-8">
+      <!-- Pantalla de carga-->
+        <script type="text/javascript">
              window.onload = detectarCarga;
-
-               function detectarCarga(){
-
+            
+            function detectarCarga(){
                  document.getElementById("cargando").style.visibility="hidden";
-
                }
-
-           </script>
-
-
-
+        </script>
            <!-- Pantalla de carga-->
-
       </head>
 
         <!-- Pantalla de carga-->
@@ -235,7 +163,6 @@ $conta2 =$conta2 +1;
   <ul>
 
     <li><p>
-
           <a href="<?php echo $_SERVER['HTTP_REFERER'];?>">
 
 	        <img src="img/logo2.png" id="logo" title="Menu anterior">
@@ -243,12 +170,7 @@ $conta2 =$conta2 +1;
         </a>
 
         </p>
-
-
-
     </li>
-
-
 
     <li>
 
@@ -260,13 +182,11 @@ $conta2 =$conta2 +1;
 
 </nav>
 
+  <div class="container">
 
+    <div class="form-group">
 
-      <div class="container">
-
-        <div class="form-group">
-
-          <form name="add_name" id="add_name" method="post" action="agrega_analisis.php " ALIGN=center autocomplete="off">
+      <form name="add_name" id="add_name" method="post" action="agrega_analisis.php " ALIGN=center autocomplete="off">
 
       
 
@@ -276,20 +196,13 @@ $conta2 =$conta2 +1;
 
         Elegir Medico
 
-    <!--    <select id="idmedico"  name="idmedico" >
+    <form name="add_name" id="add_name" method="post" action="agrega_analisis.php " ALIGN=center autocomplete="off">
 
--->
-
-<form name="add_name" id="add_name" method="post" action="agrega_analisis.php " ALIGN=center autocomplete="off">
-
-        <select id="idmedico"  name="idmedico" >
-
-          
+        <select id="idmedico"  name="idmedico" onchange="sendArea()" >
 
           <?php
 
             $mysqli = mysqli_connect($host, $user, $pwd, $db);
-
 
 
             if($idpropio != 0){
@@ -300,45 +213,50 @@ $conta2 =$conta2 +1;
 
               }
               //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 INI
-              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos WHERE idmedicos = '$idmed' order by nombre asc");
+              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre, area FROM medicos WHERE idmedicos = '$idmed' order by nombre asc");
 
-              $querymedicos2 = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos order by nombre asc");
+              $querymedicos2 = $mysqli -> query ("SELECT idmedicos, nombre, area FROM medicos order by nombre asc");
               //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 FIN
-
-
-              
+             
 
               while ($valores =  mysqli_fetch_array($querymedicos, MYSQLI_ASSOC)) {
 
                 echo '<option value="'.$valores['idmedicos'].'">'.$valores['nombre'].'</option>';
-
+                $areaSel = $valores["area"];
+                
               } 
 
               while ($valores =  mysqli_fetch_array($querymedicos2, MYSQLI_ASSOC)) {
 
                 echo '<option value="'.$valores['idmedicos'].'">'.$valores['nombre'].'</option>';
+                $posMedico = $valores['idmedicos'];
+                $arregloArea [0][$posMedico]=array($valores["area"]);
 
               } 
 
-
-
             }else{
 
+              $areaSel = "";
               echo "<option  value=".$idmedico.">Seleccionar Médico</option>";
               //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 INI
-              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre FROM medicos order by nombre asc");
+              $querymedicos = $mysqli -> query ("SELECT idmedicos, nombre, area FROM medicos order by nombre asc");
               //Cambio 14/03/2018 Ordenar Alfabeticamente el dropdown: M001 FIN
+
+              $arregloArea = array();
+              
               while ($valores =  mysqli_fetch_array($querymedicos, MYSQLI_ASSOC)) {
 
                 echo '<option value="'.$valores['idmedicos'].'">'.$valores['nombre'].'</option>';
 
+                //array_push($arregloArea, $valores["area"]);
+                $posMedico = $valores['idmedicos'];
+                $arregloArea [0][$posMedico]=array($valores["area"]);
+                
               }
 
             }
-
             mysqli_close($mysqli);
 
-            
 
           ?>
 
@@ -349,24 +267,18 @@ $conta2 =$conta2 +1;
       </div>
 
 
-
       <div class="col-3">
 
     	 <label>
 
-      				Área <?php //echo $name;?>
-
-      			  <input name="area" value="<?php if($fila1 != null) { echo $fila1 [1]; }?>" style="background-color:powderblue; "required>
-
+      				Área
+              <!-- Cambios M003 CGLG 14/03/2018 FIN-->
+      			  <input id="areaM" name="area" value="<?php echo $areaSel; ?>" style="background-color:powderblue; " readonly required>
+              <!--<input name="area" value="<?php //if($fila1 != null) { echo $fila1 [1]; }?>" style="background-color:powderblue; " readonly required>-->
+              <!-- Cambios M003 CGLG 14/03/2018 FIN-->
     	 </label>
 
   		 </div>
-
-
-
-
-
-
 
 <div style="text-align:center;" class="col-1" id="dynamic_field">
 
@@ -384,7 +296,7 @@ $conta2 =$conta2 +1;
 
     while ($fila2 =  mysqli_fetch_array($fila, MYSQLI_ASSOC)) {
 
- $comentario = $fila2['comentario'];
+    $comentario = $fila2['comentario'];
 
       if($control_estudio !=$fila2['estudio'] ){
 
@@ -772,11 +684,6 @@ console.log(cont);
    var cadena = arrayJS[0][cont];
 
 
-
-
-
-
-
       //document.write(cadena[0]);
 
   if (cadena[0] == carList ){
@@ -848,10 +755,7 @@ else{
    arreglo.push(i);
 
 
-
   si++;
-
-
 
     }
 
@@ -871,49 +775,30 @@ else{
 
   $('#dynamic_field').append('<div align="center"><textarea placeholder="Comentarios"rows="6" cols="50" name="comentario[]"  style="background-color:powderblue; name="remove" id="row'+i+'"></textarea></div>');
 
-  // var x = document.getElementById("car");
-
-    //   x.remove(x.selectedIndex);
-
-    
 
 
-
-vi++;
-
+ vi++;
  a=2;
-
-// console.log(a);
 
     }
 
-
-
-  
-
-
-
     cont = cont +1;
 
-     
-
-     //   document.write("<br>"+arrayJS[0][1]);
 
    }
 
-
-
   }
-
-  
-
-//console.log(si);
-
 
 
 }
+// Cambio 14/03/2018 Campo Area : M003 INI
+ var arreglo=<?php echo json_encode($arregloArea);?>;
 
-
-
+ function sendArea() {
+    var x = document.getElementById("idmedico").value;
+    console.log(x);
+    document.getElementById("areaM").value = arreglo[0][x][0];
+}
+// Cambio 14/03/2018 Campo Area : M003 FIN
 </script>
 
