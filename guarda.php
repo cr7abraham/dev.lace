@@ -13,11 +13,6 @@
 	}
 
 
-
-
-
-
-
 switch ($sesion) {
 
 	case 'PROVEEDOR':
@@ -570,13 +565,13 @@ switch ($sesion) {
 
 		 	isset($_POST['ciudad']) && !empty($_POST['ciudad']) &&
 
-			isset($_POST['estado']) && !empty($_POST['estado']) &&
+			isset($_POST['estado']) && !empty($_POST['estado']) //&&
 
-			isset($_POST['dia']) && !empty($_POST['dia'])	&& 
+			//isset($_POST['dia']) && !empty($_POST['dia'])	//&& 
 
-			isset($_POST['mes']) && !empty($_POST['mes'])	&&
+			//isset($_POST['mes']) && !empty($_POST['mes'])	&&
 
-			isset($_POST['anio']) && !empty($_POST['anio'])
+			//isset($_POST['anio']) && !empty($_POST['anio'])
 
 			)
 
@@ -596,9 +591,9 @@ switch ($sesion) {
 
 				$dia 			= utf8_decode($_POST['dia']);
 
-				$mes 			= utf8_decode($_POST['mes']);
+				//$mes 			= utf8_decode($_POST['mes']);
 
-				$anio 			= utf8_decode($_POST['anio']);
+				//$anio 			= utf8_decode($_POST['anio']);
 
 				$email 			= utf8_decode($_POST['email']);
 
@@ -628,11 +623,7 @@ switch ($sesion) {
 
 				}
 
-
-
-				$nacimiento		= $anio.'-'.$mes.'-'.$dia;
-
-
+				$nacimiento		= $dia;
 
 				$enc = 0;
 
@@ -730,7 +721,7 @@ switch ($sesion) {
 
 					}else{
 
-						echo "Error ".mysqli_error($mysqli);
+						echo "Error".mysqli_error($mysqli);
 
 					}
 
@@ -845,12 +836,6 @@ $encontro = 0;
 				}
 
 			
-
-        
-
-			
-
-
 
 				include("includes/alert.php");
 
@@ -994,9 +979,9 @@ $encontro = 0;
 
 				$dia 			= utf8_decode($_POST['dia']);
 
-				$mes 			= utf8_decode($_POST['mes']);
+				//$mes 			= utf8_decode($_POST['mes']);
 
-				$anio 			= utf8_decode($_POST['anio']);
+				//$anio 			= utf8_decode($_POST['anio']);
 
 				$email 			= utf8_decode($_POST['email']);
 
@@ -1030,11 +1015,11 @@ $encontro = 0;
 
 				$dia 			= utf8_decode($_POST['dia']);
 
-				$mes 			= utf8_decode($_POST['mes']);
+				//$mes 			= utf8_decode($_POST['mes']);
 
-				$anio 			= utf8_decode($_POST['anio']);
+				//$anio 			= utf8_decode($_POST['anio']);
 
-				$nacimiento		= $anio.'-'.$mes.'-'.$dia;
+				$nacimiento		= $dia;
 
 
 

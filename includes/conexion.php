@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "lacedev";
-$pwd = "root123";
-$db = "lacedev";
+$user = "lace";
+$pwd = "root";
+$db = "lace";
 
 
 ?>

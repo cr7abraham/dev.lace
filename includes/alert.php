@@ -18,7 +18,13 @@
 
      $linkproductos = "menu_productos.php?V=".urlencode(base64_encode('variable'));
 
-	 $linkestudio = "menu_estudios.php?V=".urlencode(base64_encode('variable')); 
+	 $linkestudio = "menu_estudios.php?V=".urlencode(base64_encode('variable'));
+	 if($sesion === "DELPAC"){
+		$text = 'Eliminado';
+	 }
+	 else{
+		 $text = 'Guardado';
+	 }
 
 ?>
 
@@ -40,9 +46,9 @@
 
 			swal({
 
-  				title: "Guardado",
+  				title:"<?php echo utf8_decode( $text ); ?>",
 
-   				text: "<?php echo utf8_decode("Guardado con éxito."); ?>",
+   				text: "<?php echo  $text." con éxito."; ?>",
 
     			type: "success"
 
@@ -53,8 +59,6 @@
 							<?php 	  if(  $sesion == 'PROVEEDOR' or $sesion == 'PROVEEDORUP') { ?>
 
 								window.location.href = '<?php echo $linkproveedores; ?>';
-
-
 
 								<?php } 	  if(  $sesion == 'PRODUCTOS') { ?>
 
@@ -68,7 +72,7 @@
 
 								window.location.href = '<?php echo $linkmedico; ?>';
 
-							<?php	} if (  $sesion == 'PACIENTES' OR $sesion == 'PACIENTESUP' ) { ?>
+							<?php	} if (  $sesion == 'PACIENTES' OR $sesion == 'PACIENTESUP' OR $sesion == 'DELPAC' ) { ?>
 
 								window.location.href = '<?php echo $linkpaciente; ?>';
 
@@ -80,11 +84,7 @@
 
 								window.location.href = '<?php echo $linkestudio; ?>';
 
-							<?php	} 
-
-
-
-
+							<?php	}
 
 							?>
 

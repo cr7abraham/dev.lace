@@ -10,17 +10,9 @@
 
   if(empty($_SESSION['valueuser'])){
 
-
-
-
-
-  include("includes/error_nologin1.php");
-
-
-
+      include("includes/error_nologin1.php");
+      
      }
-
-
 
   $linkpaciente = "pacientes.php?V=".urlencode(base64_encode('variable'));
   //$linkestudio = "menu_estudios.php?V=".urlencode(base64_encode('variable'));
@@ -94,8 +86,6 @@
 
 </head>
 
-
-
 <body>
 
   <!-- Pantalla de carga-->
@@ -136,8 +126,6 @@
 
     </li>
 
-
-
     <li>
 
       <h1>Pacientes</h1>
@@ -165,10 +153,6 @@
 
 </nav>
 
-
-
-
-
       <table class="sortable" id="sorter" >
 
         <tr>
@@ -181,9 +165,9 @@
 
           <th class="nosort">An&aacute;lisis</th>
 
+          <th class="nosort">Acci&oacute;n</th>
+
         </tr>
-
-
 
 <?php
 
@@ -222,8 +206,6 @@
 
   if(empty($_GET['busca'])){
 
-
-
       $sql = "SELECT
 
               count(idpacientes)
@@ -238,11 +220,7 @@
 
       $page_rows = 15;
 
-
-
       $last= ceil($rows/$page_rows);
-
-
 
       if($last < 1){
 
@@ -250,18 +228,13 @@
 
       }
 
-
-
       $pagenum = 1;
-
-
 
       if(isset($_GET['pn'])){
 
       	  $pagenum = preg_replace('#[^0-9]#', '', $_GET['pn']);
 
       }
-
 
 
       if ($pagenum < 1) {
@@ -274,11 +247,7 @@
 
       }
 
-
-
       $limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
-
-
 
       $sql = "SELECT  idpacientes,
 
@@ -291,12 +260,6 @@
               ASC $limit";
 
       $query = mysqli_query($con, $sql);
-
-
-
-
-
-
 
       if($last != 1){
 
@@ -320,11 +283,7 @@
 
           }
 
-
-
           $paginationCtrls .= ''.$pagenum.' &nbsp; ';
-
-
 
           for($i = $pagenum+1; $i <= $last; $i++){
 
@@ -350,8 +309,6 @@
 
       }
 
-
-
     }else{
 
           $pac = $_GET['busca'];
@@ -374,16 +331,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
       while ($fila = mysqli_fetch_array($query, MYSQLI_ASSOC)){
 
         $nombre = $fila['nombre'];
@@ -395,15 +342,9 @@
         $agregar = "analisis.php?p=".urlencode(base64_encode($idpac))."&pro=".urlencode(base64_encode("0"));
 
         $vera = "view.php?p=".$idpac;
-        /*
-        $sqlC = " CREATE VIEW contador as SELECT	*
-                              FROM analisis
-                              WHERE pacientes_idpacientes = '$idpac' 
-                              group by idpropio;";
-        $result = mysqli_query($con, $sqlC);
-*/
-        
-
+//INI Modificación M008 CGLG 
+        $del = "delete.php?p=".$idpac;
+//FIN Modificación M008 CGLG         
  ?>
 
         <tr>
@@ -411,8 +352,6 @@
           <td><?php echo $fila['idpacientes']; ?></td>
 
           <td><?php echo $nombre; ?></td>
-
-
 
           <?php $idpaciente = $fila['idpacientes'];  ?>
 
@@ -422,30 +361,25 @@
             <!--a class="text" href= "<?php //echo $agregar?>"><strong>Agregar</strong></a><strong class="text"> | </strong-->
 
             <a class="text" href= "<?php  echo $vera;?>"><strong>Ver</strong></a> </td>
-
-
-
+          <!--INI Modificación M008 CGLG -->
+          <td>
+            <a class="text" href= "<?php  echo $del;?>"><strong>Eliminar</strong></a> 
+          </td>
+          <!--FIN Modificación M008 CGLG -->
         </tr>
-
-
 
 <?php }
 
   mysqli_close($con);
 
 ?>
-
       </table>
-
-
 
     <div id="pagination_controls">
 
       <?php echo $paginationCtrls; ?>
 
     </div>
-
-
 
 
 
