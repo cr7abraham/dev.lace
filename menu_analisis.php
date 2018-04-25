@@ -18,9 +18,9 @@
 
      }
   $id = "";
-  if($_GET['p']==null){
-  $_GET['p']=$_SESSION['p'];
-}
+  //if($_GET['p']==null){
+  //$_GET['p']=$_SESSION['p'];
+//}
   if(isset($_GET['p'])){
     $id = $_GET['p'];
   }
@@ -71,7 +71,7 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
 
   else{
 //echo $id = $_GET['p'];
-
+echo $id;
 
         $sql = "SELECT nombre
                   FROM pacientes
@@ -243,11 +243,12 @@ if(!isset($_GET['p']) && !isset($_GET['busca']) ){
 
  //    if($registros!= null){
 
+  $vistaq = "contador".$idpacientes;
   $sql = "SELECT  estudio,
                   fecha,
                   medicos_idmedicos,
                   idpropio
-            FROM contador
+            FROM $vistaq
             GROUP BY idpropio";
 
       $query = mysqli_query($con, $sql);

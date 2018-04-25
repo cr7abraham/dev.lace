@@ -175,7 +175,6 @@
   $con = "";
 
   $con = mysqli_connect($host, $user, $pwd, $db);
-
   $contar = "SHOW TABLES LIKE 'contador'";
   $contador_show = mysqli_query($con, $contar);
   $num = mysqli_num_rows($contador_show);

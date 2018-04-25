@@ -8,7 +8,8 @@
     $id = 0;
     if(isset($_GET['p'])){
         $id = $_GET['p'];
-        $sqlC = " CREATE VIEW contador as SELECT *
+        $vista = "contador".$id;
+        $sqlC = " CREATE VIEW $vista as SELECT *
                               FROM analisis
                               WHERE pacientes_idpacientes = '$id' 
                               group by idpropio";
