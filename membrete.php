@@ -10,14 +10,11 @@
             $idpac = $_GET['idpaciente'];
         }
     
-    	if(isset($_GET['print'])){
+    	if($_GET['print3'] == "print"){
             include('includes/alert_memb.php');
         }
-	    if(isset($_GET['email'])){
-            header("Location: recupera.php?idpac=".$idpac."&array=".$array);
-           
+	    if($_GET['print3'] == "mail"){
+            header("Location: recupera.php?idpac=".$idpac."&array=".$array);           
         } 
-
-    
     
 ?>

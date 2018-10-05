@@ -125,8 +125,9 @@ echo $id;
           <input type="hidden" name="array" id="array">
           <a  href= "analisis.php?p=<?php echo urlencode(base64_encode($_GET['p']))?>&pro=<?php echo urlencode(base64_encode(0)) ?>" class="add">
           <img src="img/addanalisis.png" title="Agregar analisis"></a>
-          <input id="print" name = "print" value="printV" title="Imprimir" type="image" src="img/printer.png" alt="Submit" formtarget="_blank">
-          <input id="email" name="email" value="emailV" title="Enviar correo" type="image" src="img/email.png" alt="Submit" formtarget="_blank">
+          <input id="print" name = "print" value = "printV" title="Imprimir" type="image" src="img/printer.png"  formtarget="_blank" onclick="seleccion(title)">
+          <input id="email" name = "email" value = "emailV" title="Correo" type="image" src="img/email.png" formtarget="_blank" onclick="seleccion(title)">
+          <input id= "print3" name = "print3" type="hidden">
        </div>
        </form>
     </li>
@@ -332,6 +333,18 @@ echo $id;
           console.log(xarray);
         }
       }
+
+      function seleccion(x){          
+        if(x == 'Imprimir'){
+          console.log(x);
+          document.getElementById("print3").value = "print";
+        }
+        else {
+          document.getElementById("print3").value = "mail";
+        }
+        document.getElementById("yolo").submit();
+      }
+      
 </script>
 <script type="text/javascript">
 var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));

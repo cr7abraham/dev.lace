@@ -13,7 +13,7 @@
 	//$membrete= "prueba_analisis.php?idpac=".urlencode(base64_encode($idpac))."&idpr=".urlencode(base64_encode($idprop))."&idm=".urlencode(base64_encode($idm))."&memb=".urlencode(base64_encode('true'))."&array=".serialize($array);
 	//$nomemb = "php/pdf/reporte.php?idpac=".urlencode(base64_encode($idpac))."&idpr=".urlencode(base64_encode($idprop))."&idm=".urlencode(base64_encode($idm))."&memb=".urlencode(base64_encode('false'));
 	//$nomemb = "prueba_analisis.php?idpac=".urlencode(base64_encode($idpac))."&idpr=".urlencode(base64_encode($idprop))."&idm=".urlencode(base64_encode($idm))."&memb=".urlencode(base64_encode('false'))."&array=".serialize($array);
-	if(isset($_GET['print'])){
+	if(isset($_GET['print3'])){
 		$conmembrete = "php/pdf/reporte.php?array=".serialize($array)."&memb=true";
 		$nomemb = "php/pdf/reporte.php?array=".serialize($array)."&memb=false";
 	}
